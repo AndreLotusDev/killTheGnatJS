@@ -98,8 +98,8 @@ var tickTack = setInterval(function instantiateGnat()
         return pickOne
     }
     // Calculo randomizador da posição da mosca
-    var posX = Math.floor(Math.random() * height) - 90
-    var posY = Math.floor(Math.random() * widht) - 90
+    var posX = Math.floor(Math.random() * height) - 120
+    var posY = Math.floor(Math.random() * widht) - 120
 
     // Evita possiveis bugs de sumir a mosca
     posX = posX < 0 ? 0 : posX

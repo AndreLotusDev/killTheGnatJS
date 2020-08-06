@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Mosquito - Game</title>
+
+    <script src="config.js"></script>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body onresize="adjustSize()">
+
+    <!-- <img src="images/mosca.png" class="gnat"/> -->
+
+    <div class="panel">
+        <div class="lifes">
+            <img id="v1" src="images/coracao_cheio.png"/>
+            <img id="v2" src="images/coracao_cheio.png"/>
+            <img id="v3" src="images/coracao_cheio.png"/>
+        </div>
+
+        <div class="time">Tempo restante: <span id='timer'></span></div>
+    </div>
+
+    <script>
+        document.getElementById('timer').innerHTML = time
+        setInterval(function(){instantiateGnat()}, 2000)
+    </script>
+</body>
+</html>
