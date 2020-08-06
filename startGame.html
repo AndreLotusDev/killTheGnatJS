@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start - Mosquito Game </title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="images/game.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select id='level' class="form-control">
+
+                            <option value="none">--Selecione a dificuldade--</option>
+                            <option value="normal">Normal</option>
+                            <option value="hard">Dificil</option>
+                            <option value="hardcore">Ultra Hard</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success" onclick="openNewGame()">Iniciar o jogo!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNewGame()
+        {
+            var level = document.getElementById('level').value
+            if(level == 'none')
+            {
+                alert("Selecione um nível para poder jogar")
+            }
+            else
+            {
+                window.location.href = "jogo.html?" + level
+            }
+        }
+    </script>
+</body>
+</html>
